@@ -52,7 +52,8 @@ class rsyslog::server (
   $ssl_key                   = undef,
   $log_templates             = false,
   $actionfiletemplate        = false,
-  $rotate                    = undef
+  $rotate                    = undef,
+  $log_regex                 = '%source:R,ERE,1,DFLT:([a-z0-9-]+(\.[a-z]+)?)--end%'
 ) inherits rsyslog {
 
   ### Logrotate policy
